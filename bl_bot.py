@@ -330,9 +330,9 @@ def intel(num, sleep_time=3):
 
 
 
-    for i in range(5):
-        zoom_in()
-        time.sleep(0.5)
+    # for i in range(5):
+    #     zoom_in()
+    #     time.sleep(0.5)
     time.sleep(1)
     intel_menu()
     time.sleep(2)
@@ -445,9 +445,5 @@ def auto_join(num, state):
     maximize_and_restore_window()
 
 
-
-
-
-
-
-
+while True:
+    intel(2)
