@@ -55,7 +55,7 @@ def bring_window_to_foreground(handle):
 
 def activate_multi_instance_manager(
         window_title="BlueStacks Multi Instance Manager"):  # This will bring multi instance manager to the foreground
-    time.sleep(5)
+    time.sleep(3)
 
     handle = get_window_handle_by_title(window_title)
 
@@ -138,7 +138,106 @@ start_time = time.time()
 
 end_time = time.time()
 elapsed_time = end_time - start_time
+def alliance_contributions(num):
+    activate_multi_instance_manager(f"Michail {num}")
+    maximize_and_restore_window()
+    time.sleep(1)
+    pyautogui.moveTo(1100,1025, duration=0.5)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.moveTo(1100,800, duration=0.5)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.moveTo(950,880, duration=0.5)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.moveTo(1100,870, duration=0.5)
+    pyautogui.click(clicks=50, interval=0.1)
+    time.sleep(3)
+    pyautogui.moveTo(690,30, duration=0.5)
+    pyautogui.click(clicks=3, interval=0.5)
+    time.sleep(1)
+    maximize_and_restore_window()
 
+
+
+def vip(num):
+    activate_multi_instance_manager(f"Michail {num}")
+    maximize_and_restore_window()
+    time.sleep(6)
+    pyautogui.moveTo(1080,60, duration=0.5)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.moveTo(1150,700, duration=0.5)
+    pyautogui.click(clicks=2, interval=2)
+    time.sleep(3)
+    pyautogui.moveTo(1180,240, duration=0.5)
+    pyautogui.click(clicks=2, interval=2)
+    time.sleep(3)
+    pyautogui.moveTo(690,30, duration=0.5)
+    pyautogui.click()
+    time.sleep(1)
+    maximize_and_restore_window()
+
+def recruit(num):
+    activate_multi_instance_manager(f"Michail {num}")
+    maximize_and_restore_window()
+    time.sleep(2)
+    pyautogui.moveTo(800,1030, duration=0.5)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.moveTo(1100,1020, duration=0.5)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.moveTo(820,710, duration=0.5)
+    pyautogui.click()
+    time.sleep(1)
+    pyautogui.moveTo(950, 20, duration=0.5)
+    while not pyautogui.pixelMatchesColor(840,30,(89,122,147)):
+        pyautogui.click()
+        time.sleep(0.1)
+    time.sleep(1)
+    pyautogui.moveTo(690,30, duration=0.5)
+    pyautogui.click()
+    time.sleep(2)
+    pyautogui.moveTo(690, 30, duration=0.5)
+    pyautogui.click()
+    time.sleep(1)
+    maximize_and_restore_window()
+
+
+def auto_join(num, state):
+    activate_multi_instance_manager(f"Michail {num}")
+    maximize_and_restore_window()
+    time.sleep(1)
+    pyautogui.moveTo(1100, 1025, duration=0.5)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.moveTo(820, 560, duration=0.5)
+    pyautogui.click()
+    time.sleep(1)
+    pyautogui.moveTo(950, 1030, duration=0.5)
+    pyautogui.click()
+    time.sleep(1)
+    if state == "on":
+        pyautogui.moveTo(1090, 920, duration=0.5)
+        pyautogui.click()
+    elif state == "off":
+        pyautogui.moveTo(800, 920, duration=0.5)
+        pyautogui.click()
+    else:
+        print("invalid state")
+    time.sleep(1)
+    pyautogui.moveTo(690, 30, duration=0.5)
+    pyautogui.click()
+    time.sleep(1)
+    pyautogui.moveTo(690, 30, duration=0.5)
+    pyautogui.click()
+    time.sleep(1)
+    pyautogui.moveTo(690, 30, duration=0.5)
+    pyautogui.click()
+
+    maximize_and_restore_window()
 def maximize_and_restore_window():
     pyautogui.press('f11')
 
@@ -339,111 +438,146 @@ def intel(num, sleep_time=3):
     find_mission()
 
 
-    maximize_and_restore_window()
+    # maximize_and_restore_window()
     print(boss_blacklist)
 
 
-def alliance_contributions(num):
-    activate_multi_instance_manager(f"Michail {num}")
-    maximize_and_restore_window()
-    time.sleep(1)
-    pyautogui.moveTo(1100,1025, duration=0.5)
-    pyautogui.click()
-    time.sleep(3)
-    pyautogui.moveTo(1100,800, duration=0.5)
-    pyautogui.click()
-    time.sleep(3)
-    pyautogui.moveTo(950,880, duration=0.5)
-    pyautogui.click()
-    time.sleep(3)
-    pyautogui.moveTo(1100,870, duration=0.5)
-    pyautogui.click(clicks=50, interval=0.1)
-    time.sleep(3)
-    pyautogui.moveTo(690,30, duration=0.5)
-    pyautogui.click(clicks=3, interval=0.5)
-    time.sleep(1)
-    maximize_and_restore_window()
 
+def rally_old(acc, lvl):
+    activate_multi_instance_manager(f"Michail {acc}")
 
-
-def vip(num):
-    activate_multi_instance_manager(f"Michail {num}")
-    maximize_and_restore_window()
-    time.sleep(6)
-    pyautogui.moveTo(1080,60, duration=0.5)
-    pyautogui.click()
-    time.sleep(3)
-    pyautogui.moveTo(1150,700, duration=0.5)
-    pyautogui.click(clicks=2, interval=2)
-    time.sleep(3)
-    pyautogui.moveTo(1180,240, duration=0.5)
-    pyautogui.click(clicks=2, interval=2)
-    time.sleep(3)
-    pyautogui.moveTo(690,30, duration=0.5)
-    pyautogui.click()
-    time.sleep(1)
-    maximize_and_restore_window()
-
-def recruit(num):
-    activate_multi_instance_manager(f"Michail {num}")
     maximize_and_restore_window()
     time.sleep(2)
-    pyautogui.moveTo(800,1030, duration=0.5)
-    pyautogui.click()
-    time.sleep(3)
-    pyautogui.moveTo(1100,1020, duration=0.5)
-    pyautogui.click()
-    time.sleep(3)
-    pyautogui.moveTo(820,710, duration=0.5)
-    pyautogui.click()
-    time.sleep(1)
-    pyautogui.moveTo(950, 20, duration=0.5)
-    while not pyautogui.pixelMatchesColor(840,30,(89,122,147)):
-        pyautogui.click()
-        time.sleep(0.1)
-    time.sleep(1)
-    pyautogui.moveTo(690,30, duration=0.5)
-    pyautogui.click()
+
+    # for i in range(5):
+    #     zoom_in()
+    #     time.sleep(0.5)
+    while pyautogui.pixelMatchesColor(848, 226, (255, 255, 255)) or pyautogui.pixelMatchesColor(848, 226, (254, 255, 255)) or pyautogui.pixelMatchesColor(840, 238, (76, 198, 244)) or pyautogui.pixelMatchesColor(840, 238, (78, 198, 244)):  # wait for march to return
+        time.sleep(1)
+
+
+
+    pyautogui.moveTo(700,740, duration=0.5)
+    pyautogui.click() #click on magnifier
     time.sleep(2)
-    pyautogui.moveTo(690, 30, duration=0.5)
+
+    if lvl == 5:
+
+        pyautogui.moveTo(936, 888, duration=0.3)
+        pyautogui.click()  # lvl 5 polar
+    elif lvl == 6:
+        pyautogui.moveTo(980, 888, duration=0.3)
+        pyautogui.click()  # lvl 6 polar
+
+    pyautogui.moveTo(950, 1020, duration=0.3)
+    pyautogui.click() #click on search
+    time.sleep(4)
+
+    pyautogui.moveTo(970, 460, duration=0.3)
+    pyautogui.click() #click on rally
+
+    time.sleep(1)
+
+    pyautogui.moveTo(960, 700, duration=0.3)
+    pyautogui.click()  # click on hold a rally
+
+    time.sleep(2)
+
+
+    if acc == 5:
+        try:
+            pyautogui.moveTo(855, 215, duration=0.3)  # remove all heroes
+            pyautogui.click()
+            time.sleep(0.5)
+            pyautogui.moveTo(800, 320, duration=0.3)  # start choosing hero
+            pyautogui.click()
+            time.sleep(0.5)
+            gina = pyautogui.locateOnScreen('gina.png', region=(710, 480, 1210, 780), grayscale=True, confidence=0.8)
+            if gina:
+                pyautogui.moveTo(gina, duration=0.3)
+                pyautogui.click()  # choose gina
+                pyautogui.moveTo(1090, 850, duration=0.5)  # triple assign
+                pyautogui.click()
+                time.sleep(0.5)
+                pyautogui.click()
+                time.sleep(0.5)
+                pyautogui.click()
+                time.sleep(0.5)
+                pyautogui.moveTo(970, 30, duration=0.5)  # remove from choosing heroes
+                pyautogui.click()
+        except Exception:
+            pass
+
+
+    pyautogui.moveTo(710,1000, duration=0.3)
+    pyautogui.click()
+    time.sleep(0.5)
+    pyautogui.moveTo(1210,550, duration=0.3)
+    pyautogui.click()
+    time.sleep(0.5)
+
+    pyautogui.moveTo(1120, 1020, duration=0.3)  # click on deploy
     pyautogui.click()
     time.sleep(1)
+
+
+
+
+    maximize_and_restore_window()
+
+def rally(acc, lvl):
+    activate_multi_instance_manager(f"Michail {acc}")
+
+    maximize_and_restore_window()
+    time.sleep(2)
+
+    while pyautogui.pixelMatchesColor(848, 226, (255, 255, 255)) or pyautogui.pixelMatchesColor(848, 226, (254, 255, 255)) or pyautogui.pixelMatchesColor(840, 238, (76, 198, 244)) or pyautogui.pixelMatchesColor(840, 238, (78, 198, 244)):  # wait for march to return
+        time.sleep(1) #wait for march to return
+
+
+
+    pyautogui.moveTo(700,740, duration=0.5)
+    pyautogui.click() #click on magnifier
+    time.sleep(2)
+
+    if lvl == 5:
+
+        pyautogui.moveTo(936, 888, duration=0.3)
+        pyautogui.click()  # lvl 5 polar
+    elif lvl == 6:
+        pyautogui.moveTo(980, 888, duration=0.3)
+        pyautogui.click()  # lvl 6 polar
+
+    pyautogui.moveTo(950, 1020, duration=0.3)
+    pyautogui.click() #click on search
+    time.sleep(4)
+
+    pyautogui.moveTo(970, 460, duration=0.3)
+    pyautogui.click() #click on rally
+
+    time.sleep(1)
+
+    pyautogui.moveTo(960, 700, duration=0.3)
+    pyautogui.click()  # click on hold a rally
+
+    time.sleep(2)
+
+
+
+
+
+    pyautogui.moveTo(1020,100, duration=0.3)
+    pyautogui.click()
+    time.sleep(0.5)
+
+    pyautogui.moveTo(1120, 1020, duration=0.3)  # click on deploy
+    pyautogui.click()
+    time.sleep(1)
+
+
+
+
     maximize_and_restore_window()
 
 
-def auto_join(num, state):
-    activate_multi_instance_manager(f"Michail {num}")
-    maximize_and_restore_window()
-    time.sleep(1)
-    pyautogui.moveTo(1100, 1025, duration=0.5)
-    pyautogui.click()
-    time.sleep(3)
-    pyautogui.moveTo(820, 560, duration=0.5)
-    pyautogui.click()
-    time.sleep(1)
-    pyautogui.moveTo(950, 1030, duration=0.5)
-    pyautogui.click()
-    time.sleep(1)
-    if state == "on":
-        pyautogui.moveTo(1090, 920, duration=0.5)
-        pyautogui.click()
-    elif state == "off":
-        pyautogui.moveTo(800, 920, duration=0.5)
-        pyautogui.click()
-    else:
-        print("invalid state")
-    time.sleep(1)
-    pyautogui.moveTo(690, 30, duration=0.5)
-    pyautogui.click()
-    time.sleep(1)
-    pyautogui.moveTo(690, 30, duration=0.5)
-    pyautogui.click()
-    time.sleep(1)
-    pyautogui.moveTo(690, 30, duration=0.5)
-    pyautogui.click()
 
-    maximize_and_restore_window()
-
-
-while True:
-    intel(2)
